@@ -84,8 +84,20 @@ my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
 # range object does not change by plotting
 # therefore we only need to initialize x once
 x = range(len(my_list))
-plt.plot(x, my_list)
+# changed plot type to scatter for better ink-to-information ratio
+plt.scatter(x, my_list)
+# added title and labels
+plt.title('Before sorting')
+plt.xlabel('Position')
+plt.ylabel('Value')
 plt.show()
 merge_sort(my_list)
 plt.plot(x, my_list)
+
+merge_sort(my_list)
+# same changes as above
+plt.scatter(x, my_list)
+plt.title('After sorting')
+plt.xlabel('Position')
+plt.ylabel('Value')
 plt.show()
