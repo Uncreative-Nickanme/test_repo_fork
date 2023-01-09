@@ -43,9 +43,18 @@ import matplotlib.pyplot as plt
 
 my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
 x = range(len(my_list))
-plt.plot(x, my_list)
+# changed plot type to scatter for better ink-to-information ratio
+plt.scatter(x, my_list)
+# added title and labels
+plt.title('Before sorting')
+plt.xlabel('Position')
+plt.ylabel('Value')
 plt.show()
+
 mergeSort(my_list)
-x = range(len(my_list))
-plt.plot(x, my_list)
+# same changes as above
+plt.scatter(x, my_list)
+plt.title('After sorting')
+plt.xlabel('Position')
+plt.ylabel('Value')
 plt.show()
